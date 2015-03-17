@@ -20,7 +20,7 @@ $cl->SetServer( "127.0.0.1", 9312 );
 
 
 $cl->SetLimits(0,10000);
-$search = 'Asus';
+$search = 'Ноутбук Asus ROG';
 $result = $cl->Query($search, 'SC_products');
 
 if ( $result === false ) {
@@ -28,8 +28,7 @@ if ( $result === false ) {
 }
 else {
     if ( $cl->GetLastWarning() ) {
-        echo "WARNING: " . $cl->GetLastWarning() . " // выводим предупреждение если оно было
-        ";
+        echo "WARNING: " . $cl->GetLastWarning();
     }
 
     if ( ! empty($result["matches"]) ) {

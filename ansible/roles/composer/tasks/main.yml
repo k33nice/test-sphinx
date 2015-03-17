@@ -10,3 +10,6 @@
 - name: Make composer executable
   shell: chmod a+x /usr/local/bin/composer
   tags: composer
+
+- name: Install dependecies
+  command: composer install chdir=../

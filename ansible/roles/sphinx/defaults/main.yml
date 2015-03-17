@@ -27,7 +27,7 @@ sphinx_sources:
       type: "mysql"
       sql_host: "89.184.67.36"
       sql_user: "webbylab_user"
-      sql_pass: "remote_webbylab_user_1909"
+      sql_pass: ""
       sql_db: "superitbox"
       sql_port: "3306"
       sql_query: "SELECT productID, name_ru, name_ua, description_ru, description_ua FROM SC_products"

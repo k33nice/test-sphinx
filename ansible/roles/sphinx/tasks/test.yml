@@ -1,0 +1,11 @@
+---
+
+- name: Create xml file for testing purpose
+  copy:
+    src: test.xml
+    dest: /tmp/test.xml
+    owner: root
+    group: root
+    mode: 0644
+  tags:
+    - test

@@ -1,0 +1,41 @@
+---
+
+sphinx_use_ext_config: True
+sphinx_config_dir: "/etc/sphinxsearch"
+
+sphinx_searchd:
+  listen: ["9312", "9306:mysql41"]
+  log: "/var/log/sphinxsearch/searchd.log"
+  query_log: "/var/log/sphinxsearch/query.log"
+  read_timeout: 5
+  max_children: 30
+  pid_file: "/var/run/sphinxsearch/searchd.pid"
+  max_matches: 1000
+  seamless_rotate: 1
+  preopen_indexes: 1
+  unlink_old: 1
+  compat_sphinxql_magics: 0
+  workers: "threads"
+  binlog_path: "/var/lib/sphinxsearch/data"
+
+sphinx_indexer:
+  mem_limit: "32M"
+
+sphinx_sources:
+  - source:
+      name: "SC_products"
+      type: "mysql"
+      sql_host: "89.184.67.36"
+      sql_user: "webbylab_user"
+      sql_pass: "remote_webbylab_user_1909"
+      sql_db: "superitbox"
+      sql_port: "3306"
+      sql_query: "SELECT productID, name_ru, name_ua, description_ru, description_ua FROM SC_products"
+
+
+sphinx_indexes:
+  - index:
+      name: "SC_products"
+      source: "SC_products"
+      path: "/var/lib/sphinxsearch/data/SC_products"
+      charset_type: "utf-8"

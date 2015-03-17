@@ -1,0 +1,15 @@
+---
+galaxy_info:
+  author: "Semyon Deviatkin"
+  license: BSD
+  min_ansible_version: 1.4
+  platforms:
+   - name: Ubuntu
+     versions:
+      - trusty
+   - name: Debian
+     versions:
+      - wheezy
+  categories:
+   - database
+dependencies: []

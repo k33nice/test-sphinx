@@ -1,0 +1,14 @@
+{
+    "name": "Project name",
+    "description": "project description",
+    "keywords": ["project keywords"],
+    "authors": [
+        {
+            "name": "author",
+            "email": "author@email.com"
+        }
+    ],
+    "require": {
+        "nilportugues/sphinx-search": "dev-master"
+    }
+}
